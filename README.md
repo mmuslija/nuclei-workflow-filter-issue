@@ -4,10 +4,17 @@ Hardcoded target for all templates is a http server running on localhost:8000.
 
 To reproduce the issue:
 
+Start a python server:
 ```bash
-git clone https://github.com/mmuslija/nuclei-workflow-filter-issue.git
-cd nuclei-workflow-filter-issue
-NUCLEI_TEMPLATES_DIR=$(pwd) nuclei -duc -debug -u ignored -w workflow.yaml -id L1
+$ python3 -m http.server 8000
+```
+
+Clone repo and run the templates:
+
+```bash
+$ git clone https://github.com/mmuslija/nuclei-workflow-filter-issue.git
+$ cd nuclei-workflow-filter-issue
+$ NUCLEI_TEMPLATES_DIR=$(pwd) nuclei -duc -debug -u ignored -w workflow.yaml -id L1
 ```
 
 In the applied filter `-id L1`, `L1` is the ID of template [leaf_1.yaml].
@@ -249,4 +256,3 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 
 This is because nuclei automatically includes workflow templates containing subtemplates in the run, without checking whether any of the subtemplates match the applied filters.
-
