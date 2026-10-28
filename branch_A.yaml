@@ -1,0 +1,16 @@
+id: BA
+
+info:
+  name: Branch A
+  author: Bob
+  severity: info
+
+http:
+  - method: GET
+    path:
+      - "http://localhost:8000/A"
+
+    matchers:
+      - type: status
+        status:
+          - 404

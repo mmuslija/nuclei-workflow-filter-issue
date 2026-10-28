@@ -1,0 +1,16 @@
+id: L4
+
+info:
+  name: Leaf Template 4
+  author: Jack
+  severity: high
+
+http:
+  - method: GET
+    path:
+      - "http://localhost:8000/4"
+
+    matchers:
+      - type: status
+        status:
+          - 404

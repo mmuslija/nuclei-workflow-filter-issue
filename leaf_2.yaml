@@ -1,0 +1,16 @@
+id: L2
+
+info:
+  name: Leaf Template 2
+  author: Alice
+  severity: medium
+
+http:
+  - method: GET
+    path:
+      - "http://localhost:8000/2"
+
+    matchers:
+      - type: status
+        status:
+          - 404

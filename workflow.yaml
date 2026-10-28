@@ -1,0 +1,21 @@
+id: W
+
+info:
+  name: Workflow
+  author: Bob
+
+workflows:
+  - template: branch_A.yaml
+    subtemplates:
+      - template: leaf_1.yaml
+      - template: leaf_2.yaml
+
+  - template: branch_B.yaml
+    subtemplates:
+      - template: leaf_3.yaml
+  
+  - template: branch_C.yaml
+    subtemplates:
+      - template: branch_C_A.yaml
+        subtemplates:
+          - template: leaf_4.yaml

@@ -1,0 +1,17 @@
+id: L1
+
+info:
+  name: Leaf Template 1
+  author: Bob
+  severity: low
+  tags: l1-tag
+
+http:
+  - method: GET
+    path:
+      - "http://localhost:8000/1"
+
+    matchers:
+      - type: status
+        status:
+          - 404
