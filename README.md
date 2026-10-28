@@ -255,4 +255,4 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 127.0.0.1 - - [28/Oct/2026 14:56:51] "GET /C_A HTTP/1.1" 404 -
 ```
 
-This is because nuclei automatically includes workflow templates containing subtemplates in the run, without checking whether any of the subtemplates match the applied filters.
+Nuclei included templates `branch_B.yaml`, `branch_C.yaml`, and `branch_C_A.yaml` in the run because nuclei automatically includes workflow templates containing subtemplates, without checking whether any of the subtemplates match the applied filters.
