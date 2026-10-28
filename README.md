@@ -17,9 +17,9 @@ $ cd nuclei-workflow-filter-issue
 $ NUCLEI_TEMPLATES_DIR=$(pwd) nuclei -duc -debug -u ignored -w workflow.yaml -id L1
 ```
 
-In the applied filter `-id L1`, `L1` is the ID of template [leaf_1.yaml].
+In the applied filter `-id L1`, `L1` is the ID of template [leaf_1.yaml](leaf_1.yaml).
 
-Based on defined steps in [workflow.yaml], expected behavior is for nuclei to load and run templates:
+Based on defined steps in [workflow.yaml](workflow.yaml), expected behavior is for nuclei to load and run templates:
 - `branch_A.yaml` because it needs to match in order to run `leaf_1.yaml`.
 - `leaf_1.yaml` because it satisfies the filter.
 
